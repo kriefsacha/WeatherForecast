@@ -1,0 +1,5 @@
+<img [src]="'https://openweathermap.org/img/wn/' + icon + '@2x.png'" />
+<span id="info">
+    <h5 id="temp">{{temp}}° C</h5> |
+    {{date | date: 'EEEEEE, d MMMM'}}
+</span>

@@ -1,0 +1,21 @@
+<div *ngIf="currentTimezone && currentCity && weather" class="card">
+    <div class="card-body">
+        <div class="row">
+            <app-today-weather-info class="col-3" [date]="currentTimezone" [cityName]="weather.city.name"
+                [icon]="weather.list[0].weather[0].icon" [weather]="weather.list[0].weather[0].main"
+                [temp]="weather.list[0].main.temp"></app-today-weather-info>
+            <div class="col">
+                <br>
+                <div class="row" id="weatherInfoRow">
+                    <div class="col-6" *ngFor="let weather of fiveDaysWeather | slice:1">
+                        <app-weather-info class="col" [date]="weather.dt_txt " [temp]="weather.main.temp"
+                            [icon]="weather.weather[0].icon">
+                        </app-weather-info>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<button class="btn btn-primary" [routerLink]="''">Return to previous page</button>

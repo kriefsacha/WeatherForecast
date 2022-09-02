@@ -1,0 +1,9 @@
+<input type="text" placeholder="Search city" [(ngModel)]="searchTxt">
+<br><br>
+<div class="row">
+  <ng-container *ngFor="let city of (cities$ | async)">
+    <div class="col-3" *ngIf="showCity(city.matching_full_name)">
+      <app-city-card  [city]="city"></app-city-card>
+    </div>
+  </ng-container>
+</div>

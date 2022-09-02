@@ -1,0 +1,10 @@
+<div *ngIf="city">
+    <div class="card">
+         <img *ngIf="picture" class="card-img-top" src="{{picture.web}}" alt="Card image cap">
+        <div class="card-body">
+            <h6 class="card-title">{{city.matching_full_name}}</h6>
+          <p class="card-text">Current time: {{date | date: 'hh:mm a'}}</p>
+          <button class="btn btn-primary" (click)="seeDetailsClick()" [routerLink]="'weather-view'">See details</button>
+        </div>
+      </div>
+</div>

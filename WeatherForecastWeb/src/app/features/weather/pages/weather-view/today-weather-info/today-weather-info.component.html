@@ -1,0 +1,11 @@
+<div>
+    <h5>Today</h5>
+    <b>{{date | date: 'EEEEEE, d MMMM y'}}</b> <br>
+    {{cityName}}
+    <br>
+    <img [src]="'https://openweathermap.org/img/wn/' + icon + '@2x.png'" />
+    <br>
+    {{weather}}
+    <br>
+    <h4>{{temp}}° C</h4>
+</div>
